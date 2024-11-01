@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: #000;
+}
+
+header {
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+}
+
+.banniere {
+    width: 100%;
+    height: auto;
+    max-height: 200px; 
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.present {
+    flex: 1;
+    min-width: 300px;
+}
+
+.pdp {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.pdp:hover {
+    transform: scale(1.05);
+}
+
+.info {
+    flex: 2;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font: bold 1.5rem sans-serif;
+    text-transform: uppercase;
+    color: grey;
+}
+
+ul li {
+    padding: 0 .5em .25em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+
+ul li:hover {
+    color: #fff;
+}
+
+ul li:before {
+    content: "";
+    position: absolute;
+    inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
+    background: #ce4f20; /* the color */
+    scale: 0 1;
+    transition: .3s, translate 0s .3s;
+}
+
+ul:hover li:before {
+    scale: 1;
+}
+
+ul li:hover:before {
+    translate: 0;
+    transition: .3s;
+}
+
+ul:hover li:has(~ li:hover):before {
+    translate: 100% 0;
+    transition: .2s .2s, scale 0s .4s;
+}
+
+ul:hover li:hover ~ li:before {
+    translate: -100% 0;
+    transition: .2s .2s, scale 0s .4s;
+}
+
+
+.social-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-button.instagram {
+    background-color: #E1306C;
+}
+
+
+.social-button.Linkendin {
+    background-color: #1DA1F3; 
+}
+
+.social-button:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a1a1a;
+    margin-top: 20px;
+}
